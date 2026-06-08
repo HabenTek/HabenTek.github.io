@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.scss";
 import Navigation from "@/components/navigation/Navigation";
 import Footer from "@/components/footer/Footer";
+import { site } from "@/content/site-config";
+import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,9 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nebiyou Hailemariam",
-  description:
-    "Software engineer, machine learning engineer, and researcher. Building recommendation systems and conversational AI.",
+  title: site.name,
+  description: site.description,
 };
 
 export default function RootLayout({

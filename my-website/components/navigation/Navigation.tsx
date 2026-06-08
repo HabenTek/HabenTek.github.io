@@ -3,23 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Navigation.module.scss";
-
-type NavLink = {
-  label: string;
-  href: string;
-};
-
-const navLinks: NavLink[] = [
-  { label: "projects", href: "/projects" },
-  { label: "reading", href: "/reading" },
-  { label: "resume", href: "/resume" },
-];
-
-const pageTitles: Record<string, string> = {
-  "/projects": "Projects",
-  "/reading": "Reading",
-  "/resume": "Resume",
-};
+import { navLinks, pageTitles, site } from "@/content/site-config";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -28,7 +12,7 @@ export default function Navigation() {
   return (
     <header className={styles.navContainer}>
       <h1 className={styles.logo}>
-        <Link href="/">Nebiyou Hailemariam</Link>
+        <Link href="/">{site.name}</Link>
         {pageTitle ? (
           <span className={styles.pageTitle}>
             <span className={styles.pageTitleDash}>—</span> {pageTitle}

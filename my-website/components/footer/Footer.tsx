@@ -1,29 +1,5 @@
 import styles from "./Footer.module.scss";
-
-type Social = { label: string; href: string; text: string };
-
-const socials: Social[] = [
-  {
-    label: "LinkedIn",
-    href: "https://linkedin.com/in/nebhailemariam",
-    text: "nebhailemariam",
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com/nebHailemariam",
-    text: "@nebHailemariam",
-  },
-  {
-    label: "Hugging\u00A0Face",
-    href: "https://huggingface.co/nebhailema",
-    text: "nebhailema",
-  },
-  {
-    label: "Email",
-    href: "mailto:nebhailema@gmail.com",
-    text: "nebhailema@gmail.com",
-  },
-];
+import { socials } from "@/content/site-config";
 
 export default function Footer() {
   return (

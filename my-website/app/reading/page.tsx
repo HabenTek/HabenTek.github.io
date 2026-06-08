@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import ReadingSection from "@/components/reading/ReadingSection";
-import { readingSections } from "@/components/reading/reading-data";
+import { readingSections } from "@/content/reading-data";
+import { pageTitle } from "@/content/site-config";
 
 export const metadata: Metadata = {
-  title: "Nebiyou Hailemariam – Reading",
-  description:
-    "Reading list: articles, books, research papers, and courses.",
+  title: pageTitle("Reading"),
+  description: "Reading list: articles, books, and research papers.",
 };
 
 export default function ReadingPage() {

@@ -1,5 +1,5 @@
 import ReadingItem from "./ReadingItem";
-import type { ReadingSection as ReadingSectionData } from "./reading-data";
+import type { ReadingSection as ReadingSectionData } from "@/content/reading-data";
 import styles from "./ReadingSection.module.scss";
 
 type ReadingSectionProps = {

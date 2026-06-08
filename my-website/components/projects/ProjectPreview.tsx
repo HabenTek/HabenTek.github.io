@@ -4,12 +4,14 @@ type ProjectPreviewProps = {
   href: string;
   src: string;
   alt: string;
+  variant?: "photo" | "logo";
 };
 
 export default function ProjectPreview({
   href,
   src,
   alt,
+  variant = "photo",
 }: ProjectPreviewProps) {
   return (
     <a
@@ -23,7 +25,9 @@ export default function ProjectPreview({
         alt={alt}
         loading="lazy"
         decoding="async"
-        className={styles.previewImage}
+        className={
+          variant === "logo" ? styles.previewImageLogo : styles.previewImage
+        }
       />
     </a>
   );

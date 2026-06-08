@@ -1,4 +1,4 @@
-import type { ReadingItem } from "./reading-data";
+import type { ReadingItem } from "@/content/reading-data";
 import styles from "./ReadingItem.module.scss";
 
 type ReadingItemProps = {
