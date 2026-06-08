@@ -65,7 +65,7 @@ export const homeParagraphs: string[] = [
 ];
 
 export const interests =
-  "Open to full-time opportunities in robotics software, autonomy, and control systems.";
+  "Open to roles in robotics software, autonomy, and control systems.";
 
 export const techStacks: TechStack[] = [
   {
