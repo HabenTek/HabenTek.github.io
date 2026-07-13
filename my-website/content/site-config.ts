@@ -10,11 +10,21 @@ export type TechStack = {
   aside?: string;
 };
 
+export type HomeSection = {
+  title: string;
+  paragraphs: string[];
+};
+
+export type TechSection = {
+  title: string;
+  stacks: TechStack[];
+};
+
 export const site = {
   name: "Haben Gebrekidan",
   email: "hgebrek3@jh.edu",
   description:
-    "Electrical engineer and medical robotics researcher at Johns Hopkins University. ROS 2, surgical robotics, perception, and control systems.",
+    "Control engineer working across mechatronics, robotics, and industrial control systems. Real-time control, HMI, embedded systems, and automation.",
   profileImage: {
     src: "/profile.jpeg",
     alt: "Professional portrait of Haben Gebrekidan",
@@ -46,58 +56,104 @@ export const socials: SocialLink[] = [
 
 export const heroLines = [
   {
-    text: "robotics and mechatronics engineer",
+    text: "control engineer",
     mutedBefore: "is a",
     mutedAfter: ",",
   },
   {
-    text: "medical robotics researcher",
-    mutedBefore: "currently working as a",
+    text: "mechatronics, robotics, and control systems",
+    mutedBefore: "working across",
     mutedAfter: ".",
   },
 ] as const;
 
-export const homeParagraphs: string[] = [
-  "I'm a Research Assistant at the MUSiiC Lab / LCSR at Johns Hopkins University in Baltimore, MD, where I work on image-guided intraoperative robotic assistance for breast cancer surgery as part of an ARPA-H-funded PSI project.",
-  "I architect ROS 2 autonomy and real-time control pipelines for cooperative and autonomous UR5e motion, integrating impedance and admittance control, perception-driven planning, and 3D Slicer-based surgical visualization with Kitware.",
-  "My background spans medical robotics, SLAM and mobile robot navigation, embedded control, and power systems — with degrees from Johns Hopkins (M.S.E.), Syracuse University (M.S.), and Addis Ababa Science & Technology University (B.S. in Electromechanical Engineering).",
-  "I'm interested in simulation-to-real deployment, closed-loop robotic control, and building reliable software systems that connect perception, motion planning, and hardware — from ROS 2 node architecture to real-time control on physical platforms.",
+export const homeSections: HomeSection[] = [
+  {
+    title: "Control Systems",
+    paragraphs: [
+      "I'm a control engineer with hands-on experience in closed-loop feedback, model predictive control, embedded control, and real-time software for physical systems — from power electronics and grid voltage control to industrial automation.",
+      "My background includes HVAC and sensor data systems at Carrier, PCB and microcontroller work in manufacturing, and electromechanical design — with graduate training in power electronics, optimization, and control at Syracuse University and Johns Hopkins.",
+      "I'm especially interested in control systems engineering roles that connect software, hardware, and operator-facing systems — including HMI development, supervisory control, tuning and commissioning, and reliable automation on real equipment.",
+    ],
+  },
+  {
+    title: "Robotics",
+    paragraphs: [
+      "At the MUSiiC Lab / LCSR at Johns Hopkins University, I build ROS 2 control pipelines for cooperative UR5e motion, including impedance and admittance control, perception-driven planning, and simulation-to-hardware validation.",
+      "I've also worked on mobile robot SLAM and navigation, URScript hand-guiding modes, embedded motion control with Arduino, and mechatronics projects spanning sensing, actuation, and hardware integration.",
+    ],
+  },
+  {
+    title: "Software & AI",
+    paragraphs: [
+      "I develop the software layers that make complex systems usable and reliable — from ROS 2 node architecture and real-time control code to Python tooling for data acquisition, analysis, and deployment.",
+      "My machine learning work includes benchmarking lightweight segmentation models for edge deployment, with experience in PyTorch, model evaluation, and building practical pipelines from research to implementation.",
+    ],
+  },
 ];
 
 export const interests =
-  "Open to roles in robotics software, autonomy, and control systems.";
+  "Open to roles in control systems engineering, mechatronics, robotics, and automation.";
 
-export const techStacks: TechStack[] = [
+export const techSections: TechSection[] = [
   {
-    label: "programming",
-    items: "C++ • Python • MATLAB",
+    title: "Control Systems",
+    stacks: [
+      {
+        label: "control theory & tuning",
+        items:
+          "closed-loop feedback • MPC • PID tuning • impedance & admittance control • QP • system identification",
+      },
+      {
+        label: "industrial & operator systems",
+        items:
+          "HMI • supervisory control • commissioning • sensor integration • data acquisition • HVAC control systems",
+      },
+      {
+        label: "embedded & power hardware",
+        items:
+          "microcontrollers • PCB bring-up • power electronics • electromechanical systems • Arduino • Raspberry Pi",
+      },
+    ],
   },
   {
-    label: "robotics & autonomy",
-    items:
-      "ROS 1/2 • MoveIt • Gazebo • RViz • SLAM • UR5e/URScript • TurtleBot4 • LiDAR • force/torque sensing",
-    aside: "motion planning, navigation, sim-to-real",
+    title: "Robotics",
+    stacks: [
+      {
+        label: "robot software",
+        items: "ROS 1/2 • Gazebo • RViz • MoveIt • SLAM • localization • navigation • sim-to-real",
+      },
+      {
+        label: "manipulation & platforms",
+        items:
+          "UR5e • URScript • TurtleBot4 • LiDAR • force/torque sensing • motion planning • embedded motion control",
+        aside: "cooperative control, hand-guiding",
+      },
+      {
+        label: "perception & integration",
+        items:
+          "OpenCV • 3D Slicer • robot–camera synchronization • multi-view imaging • hardware validation",
+      },
+    ],
   },
   {
-    label: "control & optimization",
-    items:
-      "impedance & admittance control • task-space control • MPC • QP • closed-loop feedback",
-  },
-  {
-    label: "perception & imaging",
-    items:
-      "OpenCV • 3D Slicer • medical image segmentation • multi-view imaging • phantom-based experiments",
-    aside: "deep learning",
-  },
-  {
-    label: "machine learning",
-    items:
-      "PyTorch • CNNs • Transformer-based models • benchmarking • Dice and IoU metrics",
-  },
-  {
-    label: "tools & hardware",
-    items:
-      "Linux • Git • JupyterLab • Arduino • Raspberry Pi • SolidWorks • Altium Designer",
+    title: "Software & AI",
+    stacks: [
+      {
+        label: "programming",
+        items: "C++ • Python • MATLAB • Linux • Git",
+      },
+      {
+        label: "machine learning",
+        items:
+          "PyTorch • CNNs • Transformer-based models • segmentation • benchmarking • Dice and IoU metrics",
+        aside: "edge deployment, model evaluation",
+      },
+      {
+        label: "engineering tools",
+        items: "JupyterLab • SolidWorks • Altium Designer • experiment logging • reproducible workflows",
+      },
+    ],
   },
 ];
 
@@ -107,7 +163,7 @@ export const leetcode = {
 } as const;
 
 export const projectsIntro = {
-  heading: "Selected Projects",
+  heading: "Research & Engineering Projects",
   paragraphs: [
     "Research and engineering work in medical robotics, surgical planning, perception, and control — from ROS 2 surgical workflows to machine learning segmentation and grid voltage control.",
     "Several projects have led to conference papers, technical articles, and live ARPA-H demonstrations.",

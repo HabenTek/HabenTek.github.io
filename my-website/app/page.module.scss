@@ -50,12 +50,40 @@
   }
 }
 
+.topicSection {
+  > * + * {
+    margin-top: 1rem;
+  }
+}
+
+.sectionHeading {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
 .techSection {
   line-height: 1.375;
 
   > * + * {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
+}
+
+.techGroup {
+  > * + * {
+    margin-top: 0.75rem;
+  }
+}
+
+.techGroupHeading {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: var(--color-black);
 }
 
 .techHeading {
