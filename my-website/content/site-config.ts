@@ -24,7 +24,7 @@ export const site = {
   name: "Haben Gebrekidan",
   email: "hgebrek3@jh.edu",
   description:
-    "Control engineer working across mechatronics, robotics, and industrial control systems. Real-time control, HMI, embedded systems, and automation.",
+    "Mechatronics engineer working in robotics and control, from hardware and software to system integration.",
   profileImage: {
     src: "/profile.jpeg",
     alt: "Professional portrait of Haben Gebrekidan",
@@ -56,31 +56,31 @@ export const socials: SocialLink[] = [
 
 export const heroLines = [
   {
-    text: "control engineer",
+    text: "mechatronics engineer",
     mutedBefore: "is a",
     mutedAfter: ",",
   },
   {
-    text: "mechatronics, robotics, and control systems",
-    mutedBefore: "working across",
-    mutedAfter: ".",
+    text: "robotics and control",
+    mutedBefore: "working in",
+    mutedAfter: ", from hardware and software to system integration.",
   },
 ] as const;
 
 export const homeSections: HomeSection[] = [
   {
-    title: "Control Systems",
-    paragraphs: [
-      "I'm a control engineer with hands-on experience in closed-loop feedback, model predictive control, embedded control, and real-time software for physical systems — from power electronics and grid voltage control to industrial automation.",
-      "My background includes HVAC and sensor data systems at Carrier, PCB and microcontroller work in manufacturing, and electromechanical design — with graduate training in power electronics, optimization, and control at Syracuse University and Johns Hopkins.",
-      "I'm especially interested in control systems engineering roles that connect software, hardware, and operator-facing systems — including HMI development, supervisory control, tuning and commissioning, and reliable automation on real equipment.",
-    ],
-  },
-  {
     title: "Robotics",
     paragraphs: [
       "At the MUSiiC Lab / LCSR at Johns Hopkins University, I build ROS 2 control pipelines for cooperative UR5e motion, including impedance and admittance control, perception-driven planning, and simulation-to-hardware validation.",
       "I've also worked on mobile robot SLAM and navigation, URScript hand-guiding modes, embedded motion control with Arduino, and mechatronics projects spanning sensing, actuation, and hardware integration.",
+    ],
+  },
+  {
+    title: "Control Systems",
+    paragraphs: [
+      "I work on closed-loop feedback, model predictive control, embedded control, and real-time software for physical systems — from power electronics and grid voltage control to industrial automation.",
+      "My background includes HVAC and sensor data systems at Carrier, PCB and microcontroller work in manufacturing, and electromechanical design — with graduate training in power electronics, optimization, and control at Syracuse University and Johns Hopkins.",
+      "I'm especially interested in roles that connect software, hardware, and operator-facing systems — including HMI development, supervisory control, tuning and commissioning, and reliable automation on real equipment.",
     ],
   },
   {
@@ -96,26 +96,6 @@ export const interests =
   "Open to roles in control systems engineering, mechatronics, robotics, and automation.";
 
 export const techSections: TechSection[] = [
-  {
-    title: "Control Systems",
-    stacks: [
-      {
-        label: "control theory & tuning",
-        items:
-          "closed-loop feedback • MPC • PID tuning • impedance & admittance control • QP • system identification",
-      },
-      {
-        label: "industrial & operator systems",
-        items:
-          "HMI • supervisory control • commissioning • sensor integration • data acquisition • HVAC control systems",
-      },
-      {
-        label: "embedded & power hardware",
-        items:
-          "microcontrollers • PCB bring-up • power electronics • electromechanical systems • Arduino • Raspberry Pi",
-      },
-    ],
-  },
   {
     title: "Robotics",
     stacks: [
@@ -133,6 +113,26 @@ export const techSections: TechSection[] = [
         label: "perception & integration",
         items:
           "OpenCV • 3D Slicer • robot–camera synchronization • multi-view imaging • hardware validation",
+      },
+    ],
+  },
+  {
+    title: "Control Systems",
+    stacks: [
+      {
+        label: "control theory & tuning",
+        items:
+          "closed-loop feedback • MPC • PID tuning • impedance & admittance control • QP • system identification",
+      },
+      {
+        label: "industrial & operator systems",
+        items:
+          "HMI • supervisory control • commissioning • sensor integration • data acquisition • HVAC control systems",
+      },
+      {
+        label: "embedded & power hardware",
+        items:
+          "microcontrollers • PCB bring-up • power electronics • electromechanical systems • Arduino • Raspberry Pi",
       },
     ],
   },
